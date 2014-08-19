@@ -1,0 +1,32 @@
+/*  ---------------------
+   |      GENERAL        |
+    ---------------------  */
+body { color: #363b3f; background: #F7F6F6; }
+/*  ---------------------
+   |         MENU        |
+    ---------------------  */
+.navbar-flat {background: #191919; margin-bottom: 0px; -webkit-border-radius: 0px; -moz-border-radius: 0px; -ms-border-radius: 0px; -o-border-radius: 0px; border-radius: 0px; -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4); -moz-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4); -o-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4); -ms-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4); box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4); } 
+.navbar-flat .navbar-collapse { text-align: center; }
+.navbar-flat .navbar-toggle .icon-bar { background: white; }
+.navbar-flat ul { float: none; }
+.navbar-flat li { display: inline-block; float: none; }
+.navbar-flat li a:hover { background: #009BD9; color: white; }
+.navbar-flat li a:focus { background: #009BD9; color: white; }
+.navbar-flat li.active a { background: #009BD9; color: white; }
+.navbar-flat a { font-family: "Lato", sans-serif; font-weight: 700; color: #f7f8f8; -webkit-transition: all 0.3s ease-in, 1s; -moz-transition: all 0.3s ease-in, 1s; -o-transition: all 0.3s ease-in, 1s; -ms-transition: all 0.3s ease-in, 1s; transition: all 0.3s ease-in, 1s; }
+.navbar-flat .navbar-brand { display: none; }
+
+/*  ---------------------
+   |         FORM        |
+    ---------------------  */
+
+.form input, .form textarea { border: 1px solid #696969; color: #696969; background: none; padding: 15px 30px; margin: 0 3% 20px 0px; resize: none; }
+.form .error, .form .form-error { border-color: #c12728 !important; }
+.form .no-margin { margin-right: 0px; }
+.form input.col-lg-6 { width: 48.5%; }
+.form button { background: #F22613; }
+.form button:hover, .form button:focus { border-color: #F22613; }
+.form p { text-align: center; }
+.form a { color: #696969; }
+.form button { font-family: "Lato", sans-serif; font-weight: 700; font-size: 14px; text-decoration: none; color: white; border: 1px solid white; padding: 18px 50px 18px 50px; display: inline-block; -webkit-border-radius: 3px; -moz-border-radius: 3px; -ms-border-radius: 3px; -o-border-radius: 3px; border-radius: 3px; -webkit-transition: all 0.3s ease-in, 0s; -moz-transition: all 0.3s ease-in, 0s; -o-transition: all 0.3s ease-in, 0s; -ms-transition: all 0.3s ease-in, 0s; transition: all 0.3s ease-in, 0s; }
+.form button:hover, .form button:focus { background-color: white; color: #F22613; text-decoration: none; }
