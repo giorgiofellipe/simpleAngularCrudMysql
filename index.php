@@ -8,6 +8,7 @@
 	<!-- Styles -->
 	<link href="css/normalize.css" rel="stylesheet" type="text/css" />
 	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 	<link href="css/styles.css" rel="stylesheet" type="text/css" />
 	<!-- Scripts -->
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>

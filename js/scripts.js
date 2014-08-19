@@ -3,7 +3,7 @@ $(document).ready(function(){
 		form:'.form',
 		borderColorOnError : '#c12728',
 		scrollToTopOnError : false,
-		validateOnBlur : false,
+		validateOnBlur : true,
 		onError:function() {
 			//alert('Validation failed');
 		},
@@ -14,15 +14,28 @@ $(document).ready(function(){
 				name		= $("form[name=form] input[name='send[name]']").val(),
 				email		= $("form[name=form] input[name='send[email]']").val(),
 				cpf			= $("form[name=form] input[name='send[cpf]']").val(),
-				endereco	= $("form[name=form] input[name='send[endereco]']").val();
+				endereco	= $("form[name=form] input[name='send[endereco]']").val(),
+				//PRODUTO
+				categoria 	= $("form[name=form] input[name='send[categoria]']").val(),
+				valorcusto	= $("form[name=form] input[name='send[valorcusto]']").val(),
+				valorvenda 	= $("form[name=form] input[name='send[valorvenda]']").val(),
+				quantidade 	= $("form[name=form] input[name='send[quantidade]']").val()
+				;
 			var data = null;	
 			if (type == 'cliente') {
-				data = {type: type, object : {nome : name, email : email, cpf : cpf, endereco : endereco}};
+				data = {type: type, 
+						object : {nome : name, email : email, cpf : cpf, endereco : endereco}
+						// datatype : Array('str', 'str', 'str', 'str')
+					};
 			} else if (type == 'produto') {
-				data = {type: type, name : name}
+				data = {type: type, 
+						object : {nome : name, categoria : categoria, valorcusto : valorcusto, valorvenda : valorvenda, quantidade : quantidade},
+						datatype : Array('str', 'str', 'float', 'float', 'float')
+					};
 			} else {
 
 			}
+			console.log(data);
 			$.ajax({
 				url: '/trabalho_topicos/write.php',
 				type: 'POST',

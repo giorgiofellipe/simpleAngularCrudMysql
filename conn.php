@@ -214,7 +214,7 @@ class MySQL {
         }
 
         $query = trim($query, ', ');
-
+        
         return $this->executeSQL($query);
     }
 

@@ -2,6 +2,11 @@
    |      GENERAL        |
     ---------------------  */
 body { color: #363b3f; background: #F7F6F6; }
+section { padding: 0px 0px 50px 50px; }
+section h1, section h2, section h3, section h4 { font-family: "Lato", sans-serif; font-weight: 700; color: #696969; }
+section p { font-family: "Lato", sans-serif; font-weight: 400; font-size: 15px; line-height: 24px; }
+section .heading { text-align: center; padding-bottom: 40px; }
+
 /*  ---------------------
    |         MENU        |
     ---------------------  */
