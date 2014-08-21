@@ -5,6 +5,9 @@ body { color: #363b3f; background: #F7F6F6; font-family: "Lato", sans-serif; fon
 section { padding: 0px 0px 50px 50px; }
 section h1, section h2, section h3, section h4 { font-family: "Lato", sans-serif; font-weight: 700; color: #696969; }
 section p { font-family: "Lato", sans-serif; font-weight: 400; font-size: 15px; line-height: 24px; }
+div.centered { margin: 0 auto; float: none; }
+div.divider { width: 70%; height: 1px; background: #009BD9; margin: 10px auto; }
+i.logo-angular { background: url(../images/AngularJS-small.png) 0 no-repeat; width: 245px; height: 65px; margin: 0 auto; display: block;}
 
 /*  ---------------------
    |         MENU        |
