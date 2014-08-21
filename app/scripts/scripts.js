@@ -101,7 +101,10 @@ function refreshPage() {
 		dataType: 'json',
 		success: function(data) {
 			$(".table tr").remove();
-			
+			if (!($.isArray(data))) {
+				data = Array(data);
+			}
+			console.log(data);
 			for (key in data) {
 				var tr 			= document.createElement('tr');
 
@@ -124,6 +127,42 @@ function refreshPage() {
 					tr.appendChild(tdEmail);
 					tr.appendChild(tdCpf);
 					tr.appendChild(tdEndereco);
+				} else if (table == 'produto') {
+					var tdNome 			= document.createElement('td');
+					var tdCategoria 	= document.createElement('td');
+					var tdCusto 		= document.createElement('td');
+					var tdVenda 		= document.createElement('td');
+					var tdQuantidade 	= document.createElement('td');
+
+					tdNome.innerHTML 		= data[key].nome;
+					tdCategoria.innerHTML 	= data[key].categoria;
+					tdCusto.innerHTML 		= data[key].valorcusto;
+					tdVenda.innerHTML 		= data[key].valorvenda;
+					tdQuantidade.innerHTML 	= data[key].quantidade;
+
+					tr.appendChild(tdNome);
+					tr.appendChild(tdCategoria);
+					tr.appendChild(tdCusto);
+					tr.appendChild(tdVenda);
+					tr.appendChild(tdQuantidade);
+				} else {
+					var tdCliente 		= document.createElement('td');
+					var tdProduto 		= document.createElement('td');
+					var tdQuantidade 	= document.createElement('td');
+					var tdValorUnitario = document.createElement('td');
+					var tdValorTotal 	= document.createElement('td');
+
+					tdCliente.innerHTML 		= data[key].clientecodigo;
+					tdProduto.innerHTML 		= data[key].produtocodigo;
+					tdQuantidade.innerHTML 		= data[key].quantidadeproduto;
+					tdValorUnitario.innerHTML 	= data[key].valorunitario;
+					tdValorTotal.innerHTML 		= data[key].valortotal;
+
+					tr.appendChild(tdCliente);
+					tr.appendChild(tdProduto);
+					tr.appendChild(tdQuantidade);
+					tr.appendChild(tdValorUnitario);
+					tr.appendChild(tdValorTotal);
 				}
 				var tdAcoes 	= document.createElement('td');
 				var aDelete 	= document.createElement('button');
