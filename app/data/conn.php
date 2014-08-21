@@ -223,7 +223,7 @@ class MySQL {
         $query = "DELETE FROM `{$table}` WHERE ";
         if(is_array($where) && $where != ''){
             // Prepare Variables
-            $where = $this->SecureData($where, $wheretypes);
+            // $where = $this->SecureData($where, $wheretypes);
 
             foreach($where as $key=>$value){
                 if($like){

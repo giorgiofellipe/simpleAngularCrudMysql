@@ -1,4 +1,8 @@
 $(document).ready(function(){
+	$('.refresh-page').click(function() {
+		refreshPage();
+	});
+	refreshPage();
 
 	$.validate({
 		form:'.form',
@@ -49,7 +53,10 @@ $(document).ready(function(){
 				dataType: 'json',
 				success: function(data) {
 					$('.sendcontact').prop("disabled",true);
-					$('p.error').html('Gravado com sucesso!.');
+					$('p.error').html('Gravado com sucesso!');
+					refreshPage();
+					$("form[name=form] input").val('');
+					$("form[name=form] input[name='send[type]']").val(type);
 				},
 				error: function() {
 					$("#xhr").removeClass('xhr');
@@ -83,3 +90,79 @@ function calculaValores() {
 		}
 	});
 }
+
+function refreshPage() {
+	var table	= $("form[name=form] input[name='send[type]']").val();
+	var data = {from: table, type: 'select'};
+	$.ajax({
+		url: '/trabalho_topicos/app/data/select.php',
+		type: 'POST',
+		data: data,
+		dataType: 'json',
+		success: function(data) {
+			$(".table tr").remove();
+			
+			for (key in data) {
+				var tr 			= document.createElement('tr');
+
+				var tdCodigo 	= document.createElement('td');
+				tdCodigo.innerHTML 		= data[key].codigo;
+				tr.appendChild(tdCodigo);
+
+				if (table == 'cliente') {
+					var tdNome 		= document.createElement('td');
+					var tdEmail 	= document.createElement('td');
+					var tdCpf 		= document.createElement('td');
+					var tdEndereco 	= document.createElement('td');
+
+					tdNome.innerHTML 		= data[key].nome;
+					tdEmail.innerHTML 		= data[key].email;
+					tdCpf.innerHTML 		= data[key].cpf;
+					tdEndereco.innerHTML 	= data[key].endereco;
+
+					tr.appendChild(tdNome);
+					tr.appendChild(tdEmail);
+					tr.appendChild(tdCpf);
+					tr.appendChild(tdEndereco);
+				}
+				var tdAcoes 	= document.createElement('td');
+				var aDelete 	= document.createElement('button');
+				aDelete.id = data[key].codigo;
+				aDelete.onclick = function () {
+				    deleteRegister(this.id);
+				};
+				aDelete.innerHTML = "Deletar";
+				tdAcoes.appendChild(aDelete);
+				tr.appendChild(tdAcoes);
+
+
+				$('.table').append(tr);
+			}
+		},
+		error: function() {
+			alert('error!');
+		}
+	});
+}
+
+function deleteRegister(chave) {
+	var type = $("form[name=form] input[name='send[type]']").val();
+	var where = {'codigo':chave};
+
+	var data = {from: type, where : where};
+
+	$.ajax({
+		url: '/trabalho_topicos/app/data/delete.php',
+		type: 'POST',
+		data: data,
+		dataType: 'json',
+		success: function(data) {
+			refreshPage();
+			console.log(data);
+		},
+		error: function() {
+			alert('error!');
+		}
+	});
+}
+

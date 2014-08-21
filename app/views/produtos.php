@@ -16,4 +16,12 @@
 		<p class="error"></p>
 	</div>
 </div>
+<div class="panel panel-default col-xs-12 col-sm-9 col-md-9 centered consulta ">
+	<!-- Default panel contents -->
+	<div class="panel-heading">Produtos <i class="glyphicon glyphicon-refresh refresh-page"/></div>
+	<!-- Table -->
+	<table class="table">
+		
+	</table>
+</div>
 <script type="text/javascript" src="app/scripts/scripts.js"></script>	
