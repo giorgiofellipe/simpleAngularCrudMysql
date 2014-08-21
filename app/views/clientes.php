@@ -15,3 +15,4 @@
 		<p class="error"></p>
 	</div>
 </div>
+<script type="text/javascript" src="app/scripts/scripts.js"></script>	

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="appSinglePage">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale = 1, maximum-scale = 1, user-scalable = no, width = device-width" />
+
+	<title>Trabalho - Tópicos Avançados</title>
+	<!-- Styles -->
+	<link href="app/styles/normalize.css" rel="stylesheet" type="text/css" />
+	<link href="app/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+	<link href="app/styles/styles.css" rel="stylesheet" type="text/css" />
+	<!-- Scripts -->
+	<script type="text/javascript" src="app/scripts/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="app/scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="app/scripts/jquery.form-validator.min.js"></script>
+
+	<!--[if lt IE 9]>
+	    <script src="js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="navbar navbar-flat navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">MENU</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<nav>
+					<ul class="nav navbar-nav">
+						<!-- <li><a href="?">HOME</a></li>
+						<li><a href="?p=clientes">CLIENTES</a></li>
+						<li><a href="?p=produtos">PRODUTOS</a></li>
+						<li><a href="?p=pedidos">PEDIDOS</a></li> -->
+						<li ng-class="{active: activetab == '/'}"><a ng-href="#/home">Home</a></li>
+						<li ng-class="{active: activetab == '/clientes'}"><a ng-href="#/clientes">Clientes</a></li>
+						<li ng-class="{active: activetab == '/produtos'}"><a ng-href="#/produtos">Produtos</a></li>
+						<li ng-class="{active: activetab == '/pedidos'}"><a ng-href="#/pedidos">Pedidos</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<section id="header" class="header">
+	</section>
+
+	<!-- Views Content -->
+	<div ng-view></div>
+		
+	<section id="footer" class="footer">
+	</section>
+
+	<!-- AngularJS -->
+	<script src="app/scripts/angular.min.js"></script>
+	<script src="app/scripts/angular-route.min.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/controllers/controllers.js"></script>
+
+</body>
+</html>

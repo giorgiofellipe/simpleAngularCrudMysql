@@ -1,11 +1,10 @@
 /*  ---------------------
    |      GENERAL        |
     ---------------------  */
-body { color: #363b3f; background: #F7F6F6; }
+body { color: #363b3f; background: #F7F6F6; font-family: "Lato", sans-serif; font-weight: 700;}
 section { padding: 0px 0px 50px 50px; }
 section h1, section h2, section h3, section h4 { font-family: "Lato", sans-serif; font-weight: 700; color: #696969; }
 section p { font-family: "Lato", sans-serif; font-weight: 400; font-size: 15px; line-height: 24px; }
-section .heading { text-align: center; padding-bottom: 40px; }
 
 /*  ---------------------
    |         MENU        |
@@ -24,11 +23,11 @@ section .heading { text-align: center; padding-bottom: 40px; }
 /*  ---------------------
    |         FORM        |
     ---------------------  */
-
-.form input, .form textarea { border: 1px solid #696969; color: #696969; background: none; padding: 15px 30px; margin: 0 3% 20px 0px; resize: none; }
+.heading { text-align: center; padding-bottom: 40px; }
+.formulario { text-align: center; }
+.form input, .form textarea { border: 1px solid #696969; color: #696969; background: none; padding: 10px 10px; margin: 0 3% 20px 0px; resize: none; }
 .form .error, .form .form-error { border-color: #c12728 !important; }
 .form .no-margin { margin-right: 0px; }
-.form input.col-lg-6 { width: 48.5%; }
 .form button { background: #F22613; }
 .form button:hover, .form button:focus { border-color: #F22613; }
 .form p { text-align: center; }
