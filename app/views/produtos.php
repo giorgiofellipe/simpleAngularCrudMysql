@@ -16,7 +16,7 @@
 		<p class="error"></p>
 	</div>
 </div>
-<div class="panel panel-default col-xs-12 col-sm-9 col-md-9 centered consulta ">
+<div class="panel panel-default col-xs-12 col-sm-9 col-md-9 centered consulta " id="no-more-tables">
 	<!-- Default panel contents -->
 	<div class="panel-heading">Produtos <i class="glyphicon glyphicon-refresh refresh-page"/></div>
 	<!-- Table -->

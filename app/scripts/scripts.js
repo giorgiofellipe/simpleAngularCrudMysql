@@ -109,6 +109,7 @@ function refreshPage() {
 				var tr 			= document.createElement('tr');
 
 				var tdCodigo 	= document.createElement('td');
+				tdCodigo.setAttribute('data-title','Código:');
 				tdCodigo.innerHTML 		= data[key].codigo;
 				tr.appendChild(tdCodigo);
 
@@ -118,9 +119,13 @@ function refreshPage() {
 					var tdCpf 		= document.createElement('td');
 					var tdEndereco 	= document.createElement('td');
 
+					tdNome.setAttribute('data-title','Nome:');
 					tdNome.innerHTML 		= data[key].nome;
+					tdEmail.setAttribute('data-title','E-mail:');
 					tdEmail.innerHTML 		= data[key].email;
+					tdCpf.setAttribute('data-title','CPF:');
 					tdCpf.innerHTML 		= data[key].cpf;
+					tdEndereco.setAttribute('data-title','Endereço:');
 					tdEndereco.innerHTML 	= data[key].endereco;
 
 					tr.appendChild(tdNome);
@@ -182,6 +187,7 @@ function refreshPage() {
 			alert('error!');
 		}
 	});
+	$('td').addClass('col-xs-12 col-sm-6 col-md-3 col-lg-3');
 }
 
 function deleteRegister(chave) {
