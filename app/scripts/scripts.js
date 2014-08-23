@@ -64,12 +64,12 @@ $(document).ready(function(){
 			});
 		}
 	});	
-	$("input[name='send[quantidadeproduto]']").on('input',function(e){
-		calculaValores();
-	});
-	$("input[name='send[produtocodigo]']").on('input',function(e){
-		calculaValores();
-	});
+	// $("input[name='send[quantidadeproduto]']").on('input',function(e){
+	// 	calculaValores();
+	// });
+	// $("input[name='send[produtocodigo]']").on('input',function(e){
+	// 	calculaValores();
+	// });
 });
 
 function calculaValores() {

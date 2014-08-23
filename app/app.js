@@ -5,13 +5,13 @@ app.config(function($routeProvider){
 		templateUrl: 'app/views/home.html',
 		controller : 'HomeController',
 	}).when('/clientes', {
-		templateUrl: 'app/views/clientes.php',
+		templateUrl: 'app/views/clientes.html',
 		controller : 'ClientesController',
 	}).when('/produtos', {
-		templateUrl: 'app/views/produtos.php',
+		templateUrl: 'app/views/produtos.html',
 		controller : 'ProdutosController',
 	}).when('/pedidos', {
-		templateUrl: 'app/views/pedidos.php',
+		templateUrl: 'app/views/pedidos.html',
 		controller : 'PedidosController',
 	}).otherwise ({redirectTo: '/'});
 });
