@@ -1,9 +1,4 @@
 $(document).ready(function(){
-	// $('.refresh-page').click(function() {
-	// 	refreshPage();
-	// });
-	// refreshPage();
-
 	$.validate({
 		form:'.form',
 		borderColorOnError : '#c12728',
@@ -64,29 +59,4 @@ $(document).ready(function(){
 			});
 		}
 	});	
-	// $("input[name='send[quantidadeproduto]']").on('input',function(e){
-	// 	calculaValores();
-	// });
-	// $("input[name='send[produtocodigo]']").on('input',function(e){
-	// 	calculaValores();
-	// });
 });
-
-function calculaValores() {
-	var data = {from: 'produto', type: 'getProductsValues', product : $("input[name='send[produtocodigo]']").val()};
-
-	$.ajax({
-		url: '/trabalho_topicos/app/data/select.php',
-		type: 'POST',
-		data: data,
-		dataType: 'json',
-		success: function(data) {
-			$("input[name='send[valorunitario]']").val(data.valorvenda);
-			var total = data.valorvenda * parseFloat($("input[name='send[quantidadeproduto]']").val());
-			$("input[name='send[valortotal]']").val(total);
-		},
-		error: function() {
-			alert('error!');
-		}
-	});
-}
