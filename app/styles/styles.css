@@ -10,6 +10,8 @@ div.divider { width: 70%; height: 1px; background: #009BD9; margin: 10px auto; }
 i.logo-angular { background: url(../images/AngularJS-small.png) 0 no-repeat; width: 245px; height: 65px; margin: 0 auto; display: block;}
 .consulta { float: left !important; width: 100%;}
 .consulta i { float: right;}
+input, textarea { border: 1px solid #696969; color: #696969; background: none; resize: none; }
+.input-search {float: right; margin-right: 10px;}
 @media only screen and (max-width: 768px) { .navbar-flat li { display: inline-block; } }
 @media only screen and (max-width: 765px) { 
 	.navbar-brand { display: block !important; }
@@ -35,7 +37,7 @@ i.logo-angular { background: url(../images/AngularJS-small.png) 0 no-repeat; wid
     ---------------------  */
 .heading { text-align: center; padding-bottom: 10px; }
 .formulario { text-align: center; }
-.form input, .form textarea { border: 1px solid #696969; color: #696969; background: none; padding: 10px 10px; margin: 0 3% 5px 0px; resize: none; }
+.form input, .form textarea { padding: 10px 10px; margin: 0 3% 5px 0px;}
 .form .error, .form .form-error { border-color: #c12728 !important; }
 .form .no-margin { margin-right: 0px; }
 .form button { background: #F22613; }

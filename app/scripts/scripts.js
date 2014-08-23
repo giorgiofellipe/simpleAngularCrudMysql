@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$('.refresh-page').click(function() {
 		refreshPage();
 	});
-	refreshPage();
+	// refreshPage();
 
 	$.validate({
 		form:'.form',
@@ -104,7 +104,6 @@ function refreshPage() {
 			if (!($.isArray(data))) {
 				data = Array(data);
 			}
-			console.log(data);
 			for (key in data) {
 				var tr 			= document.createElement('tr');
 

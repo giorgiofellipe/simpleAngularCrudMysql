@@ -1,17 +1,17 @@
-angular.module('appSinglePage', ['ngRoute']);
+var app = angular.module('simpleCrudTopicosAvancados', ['ngRoute']);
 
-angular.module('appSinglePage').config(function($routeProvider){
+app.config(function($routeProvider){
 	$routeProvider.when('/', {
 		templateUrl: 'app/views/home.html',
-		controller : 'HomeCtrl',
+		controller : 'HomeController',
 	}).when('/clientes', {
 		templateUrl: 'app/views/clientes.php',
-		controller : 'ClientesCtrl',
+		controller : 'ClientesController',
 	}).when('/produtos', {
 		templateUrl: 'app/views/produtos.php',
-		controller : 'ProdutosCtrl',
+		controller : 'ProdutosController',
 	}).when('/pedidos', {
 		templateUrl: 'app/views/pedidos.php',
-		controller : 'PedidosCtrl',
+		controller : 'PedidosController',
 	}).otherwise ({redirectTo: '/'});
 });

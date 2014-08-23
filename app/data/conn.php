@@ -177,7 +177,7 @@ class MySQL {
                $this->records  = 0;
                $this->affected = 0;
             }
-
+            http_response_code(200);
             if($this->records > 0){
                 $this->arrayResults();
                 return $this->arrayedResult;
@@ -186,6 +186,7 @@ class MySQL {
             }
 
         }else{
+            http_response_code(500);
             $this->lastError = mysql_error($this->databaseLink);
             return false;
         }
