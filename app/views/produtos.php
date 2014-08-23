@@ -21,12 +21,22 @@
 		<!-- Default panel contents -->
 		<div class="panel-heading">
 			Produtos
-			<i class="glyphicon glyphicon-refresh refresh-page"/>
+			<i class="glyphicon glyphicon-refresh refresh-page" ng-click="init();"/>
 			<input type="text" class="input-search" ng-model="searchText" placeholder="Procurar..."/> 
 		</div>
 		<!-- Table -->
 		<table class="table">
-			
+			<tr ng-repeat="produto in dataList | filter:searchText">
+				<td data-title="Código:">{{ produto.codigo }}</td>
+				<td data-title="Nome:">{{ produto.nome }}</td>
+				<td data-title="Categoria:">{{ produto.categoria }}</td>
+				<td data-title="Valor Custo:">{{ produto.valorcusto | currency }}</td>
+				<td data-title="Valor Venda:">{{ produto.valorvenda | currency }}</td>
+				<td data-title="Quantidade:">{{ produto.quantidade }}</td>
+				<td data-title="Ações:">
+					<button id="{{ produto.codigo }}" ng-click="deleteData($event)">Excluir</button>
+				</td>
+			</tr>
 		</table>
 	</div>
 </div>

@@ -20,17 +20,20 @@
 		<!-- Default panel contents -->
 		<div class="panel-heading">
 			Clientes 
-			<i class="glyphicon glyphicon-refresh refresh-page"/>
+			<i class="glyphicon glyphicon-refresh refresh-page" ng-click="init();"/>
 			<input type="text" class="input-search" ng-model="searchText" placeholder="Procurar..."/> 
 		</div>
 		<!-- Table -->
 		<table class="table">
 			<tr ng-repeat="cliente in dataList | filter:searchText">
-				<td>{{ cliente.codigo }}</td>
-				<td>{{ cliente.nome }}</td>
-				<td>{{ cliente.email}}</td>
-				<td>{{ cliente.cpf}}</td>
-				<td>{{ cliente.endereco}}</td>
+				<td data-title="Código:">{{ cliente.codigo }}</td>
+				<td data-title="Nome:">{{ cliente.nome }}</td>
+				<td data-title="E-mail:">{{ cliente.email}}</td>
+				<td data-title="CPF:">{{ cliente.cpf}}</td>
+				<td data-title="Endereço:">{{ cliente.endereco}}</td>
+				<td data-title="Ações:">
+					<button id="{{ cliente.codigo }}" ng-click="deleteData($event)">Excluir</button>
+				</td>
 			</tr>
 		</table>
 	</div>
