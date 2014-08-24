@@ -19,4 +19,4 @@ Desenvolver webapp para cadastro de clientes, produtos e pedidos
 
 ### ToDo:
 Apesar de não ser o foco de entrega do trabalho:
-- Utilizar API Parse como backend (e jogar a porcaria  MySQL no limbo) - Eg.:https://github.com/brandid/parse-angular-demo;
+- Utilizar API Parse como backend (e jogar a porcaria do MySQL no limbo) - Eg.:https://github.com/brandid/parse-angular-demo;
